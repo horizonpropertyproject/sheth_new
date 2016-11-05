@@ -26,7 +26,7 @@ app.get('/',routes.home);
 
 
 
-var port = Number(process.env.PORT || 8080);
+var port = Number(process.env.PORT || 80);
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({
   extended: true
@@ -466,6 +466,4 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
         } 
     }); 
  });
-app.listen(80,function(){
-console.log('Server running at 192.168.0.11:80');	
-});
+app.listen(80);
